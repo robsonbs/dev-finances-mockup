@@ -89,7 +89,14 @@ const Transaction = {
     }, 0)
   },
   balance() {
-    return Transaction.incomes() - Transaction.expenses()
+    const total = Transaction.incomes() - Transaction.expenses();
+    if (total > 0) {
+      document.querySelector('.card.total').classList.remove('danger')
+    }
+    else {
+      document.querySelector('.card.total').classList.add('danger')
+    }
+    return total
   },
   add(transaction) {
     if (!transaction.hasOwnProperty("amount")) return;

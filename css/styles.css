@@ -123,6 +123,9 @@ header {
   background: var(--green);
   color     : var(--secondary-color);
 }
+.card.total.danger{
+  background: var(--danger-color);
+}
 
 /* Table   ####################### */
 #transactions {
